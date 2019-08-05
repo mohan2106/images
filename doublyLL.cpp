@@ -109,9 +109,9 @@ int main(){
 			// case 6:
 			// 	Length(&root);
 			// 	break;
-				case 10:
-					printList(root);
-					break;
+			case 10:
+				printList(root);
+				break;
 			default:
 				break;
 		}
