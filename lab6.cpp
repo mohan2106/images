@@ -1,27 +1,27 @@
 #include<bits/stdc++.h>
-#include<string>
-
 using namespace std;
 
 int main(){
     int n;
     cin>>n;
-    map<long,long> data;
+    int t;
+    cin>>t;
+    int userdata[n]={0};
     int max=-1;
-    while(n--){
+    while(t--){
         int code;
         cin>>code;
         if(code==1){
             long id,recharge;
             cin>>id>>recharge;
-            data[id]+=recharge;
+            userdata[id-1]+=recharge;
             if(max == -1){
                 max = id;
-            }else if(data[id]>data[max]){
+            }else if(userdata[id-1]>userdata[max]){
                 max = id;
             }
         }else if(code == 2){
-            if(data.size()>0){
+            if(max != -1){
                 cout<<max<<'\n';
             }else{
                 cout<<"No data available"<<'\n';
